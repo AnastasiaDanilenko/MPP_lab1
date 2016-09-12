@@ -8,23 +8,45 @@ namespace QuickSort
 {
     class QuickSortClass
     {
-        private 
+        private Comparator comparator;
         private int amountParameters;
-        private int[] arrayToSort;
 
         public QuickSortClass(int amount)
         {
             amountParameters = amount;
         }
 
-        public bool Compare(int first, int second)
+        public void StartSorting(int[] arrayToSort)
         {
-            return ;
+            Sort(arrayToSort, 0, arrayToSort.Count());
         }
 
-        public void GenerateArray()
+        private void Sort(int[] arrayToSort, int left, int right)
         {
+            int temp;
+            int x = arrayToSort[left + (right - left) / 2];
+            int i = left;
+            int j = right;
+            while (i <= j)
+            {
+                while (arrayToSort[i] < x) i++;
+                while (arrayToSort[j] > x) j--;
+                if (i <= j)
+                {
+                    temp = arrayToSort[i];
+                    arrayToSort[i] = arrayToSort[j];
+                    arrayToSort[j] = temp;
+                    i++;
+                    j--;
+                }
+            }
+            if (i < right)
+                Sort(arrayToSort, i, right);
 
+            if (left < j)
+                Sort(arrayToSort, left, j);
         }
+
+
     }
 }

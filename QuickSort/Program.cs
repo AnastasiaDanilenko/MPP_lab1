@@ -18,18 +18,20 @@ namespace QuickSort
             return arrayToSort;
         }
 
-        public static void StartWorking(int amountParameters)
+        public static void Working(int amountParameters)
         {
             int[] arrayToSort = GenerateArray(amountParameters);
             QuickSortClass quicksort = new QuickSortClass(amountParameters);
-            quicksort.StartSorting(arrayToSort);
+            arrayToSort = quicksort.StartSorting(arrayToSort);
+            Console.WriteLine(String.Join(",",arrayToSort));
+            Console.ReadLine();
         }
 
         public static void TryToRecognizeNumber(string someNumber)
         {
             try
             {
-                StartWorking(int.Parse(someNumber));
+                Working(int.Parse(someNumber));
             }
             catch (FormatException e)
             {

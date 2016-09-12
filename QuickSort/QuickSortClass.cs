@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuickSort
 {
-    class QuickSortClass
+    public class QuickSortClass
     {
         private Comparator comparator;
         private int amountParameters;
@@ -16,9 +16,10 @@ namespace QuickSort
             amountParameters = amount;
         }
 
-        public void StartSorting(int[] arrayToSort)
+        public int[] StartSorting(int[] arrayToSort)
         {
-            Sort(arrayToSort, 0, arrayToSort.Count());
+            Sort(arrayToSort, 0, arrayToSort.Count()-1);
+            return arrayToSort;
         }
 
         private void Sort(int[] arrayToSort, int left, int right)

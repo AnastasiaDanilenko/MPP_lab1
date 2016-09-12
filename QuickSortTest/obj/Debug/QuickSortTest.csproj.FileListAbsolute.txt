@@ -1,0 +1,9 @@
+C:\Users\Анастасия\Documents\GitHub\MPP_lab1\QuickSortTest\bin\Debug\QuickSortTest.dll
+C:\Users\Анастасия\Documents\GitHub\MPP_lab1\QuickSortTest\bin\Debug\QuickSortTest.pdb
+C:\Users\Анастасия\Documents\GitHub\MPP_lab1\QuickSortTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Анастасия\Documents\GitHub\MPP_lab1\QuickSortTest\bin\Debug\QuickSort.exe
+C:\Users\Анастасия\Documents\GitHub\MPP_lab1\QuickSortTest\bin\Debug\QuickSort.pdb
+C:\Users\Анастасия\Documents\GitHub\MPP_lab1\QuickSortTest\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\Анастасия\Documents\GitHub\MPP_lab1\QuickSortTest\obj\Debug\QuickSortTest.csprojResolveAssemblyReference.cache
+C:\Users\Анастасия\Documents\GitHub\MPP_lab1\QuickSortTest\obj\Debug\QuickSortTest.dll
+C:\Users\Анастасия\Documents\GitHub\MPP_lab1\QuickSortTest\obj\Debug\QuickSortTest.pdb

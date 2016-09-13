@@ -8,7 +8,7 @@ namespace QuickSort
 {
     public class QuickSortClass
     {
-        private Comparator comparator;
+        private Comparator comparator = new Comparator();
         private int amountParameters;
 
         public QuickSortClass(int amount)
@@ -18,11 +18,11 @@ namespace QuickSort
 
         public int[] StartSorting(int[] arrayToSort)
         {
-            Sort(arrayToSort, 0, arrayToSort.Count()-1);
+            arrayToSort = Sort(arrayToSort, 0, arrayToSort.Count()-1);
             return arrayToSort;
         }
 
-        private void Sort(int[] arrayToSort, int left, int right)
+        private int[] Sort(int[] arrayToSort, int left, int right)
         {
             int temp;
             int x = arrayToSort[left + (right - left) / 2];
@@ -30,8 +30,8 @@ namespace QuickSort
             int j = right;
             while (i <= j)
             {
-                while (arrayToSort[i] < x) i++;
-                while (arrayToSort[j] > x) j--;
+                while (comparator.Compare(arrayToSort[i], x) == -1) i++;
+                while (comparator.Compare(arrayToSort[j], x) == 1) j--;
                 if (i <= j)
                 {
                     temp = arrayToSort[i];
@@ -41,11 +41,12 @@ namespace QuickSort
                     j--;
                 }
             }
-            if (i < right)
+            if (comparator.Compare(i, right) == -1)
                 Sort(arrayToSort, i, right);
 
-            if (left < j)
+            if (comparator.Compare(left, j) == -1)
                 Sort(arrayToSort, left, j);
+            return arrayToSort;
         }
 
 

@@ -20,7 +20,7 @@ namespace QuickSort
 
         public static void Working(int amountParameters)
         {
-            int[] arrayToSort = { 1,1,1,1,1};
+            int[] arrayToSort = GenerateArray(amountParameters);
             QuickSortClass quicksort = new QuickSortClass(amountParameters);
             arrayToSort = quicksort.StartSorting(arrayToSort);
             Console.WriteLine(String.Join(",",arrayToSort));

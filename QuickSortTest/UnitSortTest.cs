@@ -43,5 +43,14 @@ namespace QuickSortTest
             int[] result = quicksort.StartSorting(justArray);
             CollectionAssert.AreEqual(correctResult, result);
         }
+
+        [TestMethod]
+        public void SortedArrayTest()
+        {
+            int[] justArray = { -132, 22, 90, 232, 999 };
+            int[] correctResult = { -132, 22, 90, 232, 999 };
+            int[] result = quicksort.StartSorting(justArray);
+            CollectionAssert.AreEqual(correctResult, result);
+        }
     }
 }

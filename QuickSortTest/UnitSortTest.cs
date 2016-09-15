@@ -8,7 +8,9 @@ namespace QuickSortTest
     public class UnitSortTest
     {
         QuickSortClass quicksort = new QuickSortClass(5);
-       [TestMethod]
+        Comparator comparator = new Comparator();
+
+  [TestMethod]
         public void TestOnEqualty()
         {
             int[] hasEqual = {2, 10, 4, 2, 10};
@@ -51,6 +53,14 @@ namespace QuickSortTest
             int[] correctResult = { -132, 22, 90, 232, 999 };
             int[] result = quicksort.StartSorting(justArray);
             CollectionAssert.AreEqual(correctResult, result);
+        }
+
+        [TestMethod]
+        public void ComparatorTest()
+        {
+            int result = comparator.Compare(5, -12);
+            int rightAnswer = 1;
+            Assert.AreEqual(rightAnswer, result);
         }
     }
 }

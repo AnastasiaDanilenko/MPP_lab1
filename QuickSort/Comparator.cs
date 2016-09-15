@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuickSort
 {
-    class Comparator:IComparer<int>
+    public class Comparator:IComparer<int>
     {
         public int Compare(int first, int second)
         {
